@@ -28,7 +28,7 @@
 
             const flip = true;
             webcam = new tmImage.Webcam(200, 200, flip);
-            await webcam.setup();
+            await webcam.setup({ facingMode: "environment" }); // back camera
             await webcam.play();
             window.requestAnimationFrame(loop);
 
